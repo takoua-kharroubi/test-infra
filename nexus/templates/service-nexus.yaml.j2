@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nexus
+  namespace: {{ namespace }}
+  
+  labels:
+   app: nexus
+spec:
+  type: NodePort
+  ports:
+  - port: {{ port_nexus }}
+    targetPort: {{ targetport_nexus }}
+    protocol: TCP
+    nodePort: {{ nodeport_nexus }}
+  selector:
+    app: nexus

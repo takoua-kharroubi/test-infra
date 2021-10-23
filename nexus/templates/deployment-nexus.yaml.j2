@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nexus
+  name: nexus
+  namespace: {{ namespace }}
+spec:
+  replicas: {{ replicas }}
+  selector:
+    matchLabels:
+      app: nexus
+ 
+  template:
+    metadata:
+      
+      labels:
+        app: nexus
+    spec:
+      containers:
+      - image: {{ image }}
+        name: nexus
+        ports:
+        - containerPort: {{ containerport_nexus }}
+        env:
+        - name: NEXUS_PASSWORD
+          value: "changeit"

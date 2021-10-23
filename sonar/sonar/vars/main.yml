@@ -1,0 +1,9 @@
+---
+replicas : 1
+image : bitnami/sonarqube:latest
+namespace: default
+containerport_sonar: 9000
+targetport_sonar: 9000
+nodeport_sonar: 31001
+port_sonar:  9000
+# vars file for sonar

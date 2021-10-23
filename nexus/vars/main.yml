@@ -1,0 +1,9 @@
+---
+replicas : 1
+image : sonatype/nexus3
+namespace: default
+containerport_nexus: 8081
+targetport_nexus: 8081
+nodeport_nexus: 31002
+port_nexus:  8081
+# vars file for nexus

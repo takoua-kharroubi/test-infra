@@ -1,0 +1,10 @@
+
+---
+replicas : 1
+image : jenkins/jenkins:lts-jdk11
+namespace: default
+containerport_jenkins: 8080
+targetport_jenkins: 8080
+nodeport_jenkins: 31000
+port_jenkins:  8080
+# vars file for jenkins

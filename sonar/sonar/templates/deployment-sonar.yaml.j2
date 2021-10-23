@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sonar
+  name: sonar
+  namespace: {{ namespace }}
+spec:
+  replicas: {{ replicas }}
+  selector:
+    matchLabels:
+      app: sonar
+ 
+  template:
+    metadata:
+      
+      labels:
+        app: sonar
+    spec:
+      containers:
+      - image: {{ image }}
+        name: sonar
+        ports:
+        - containerPort: {{ containerport_sonar }}

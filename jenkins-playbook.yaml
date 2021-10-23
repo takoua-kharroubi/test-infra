@@ -1,0 +1,4 @@
+- name: jenkins deployment playbook
+  hosts: localhost
+  roles:
+    - jenkins

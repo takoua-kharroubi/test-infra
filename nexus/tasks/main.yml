@@ -1,0 +1,9 @@
+---
+- name: create the deployments and services
+  command:  kubectl apply -f -
+  args:
+      stdin: "{{ lookup('template', '{{ item }}-nexus.yaml.j2') }}"
+  loop:
+    - deployment
+    - service
+# tasks file for nexus
